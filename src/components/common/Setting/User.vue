@@ -44,11 +44,6 @@ const rules: FormRules = {
   proxy: [{
     required: false,
     validator(rule: FormItemRule, value: string) {
-      if (!value || value.length === 0)
-        return true
-
-      else if (!/^(socks5):\/\/.+$/.test(value))
-        return new Error('Proxy must start with socks5://')
       return true
     },
     trigger: ['input', 'blur'],
