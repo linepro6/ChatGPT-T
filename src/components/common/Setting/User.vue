@@ -1,7 +1,7 @@
 <script setup lang='ts'>
 import { computed, ref } from 'vue'
 import type { FormInst, FormItemRule, FormRules } from 'naive-ui'
-import { NButton, NForm, NFormItem, NInput, NSelect, useMessage } from 'naive-ui'
+import { NButton, NForm, NFormItem, NInput, useMessage } from 'naive-ui'
 import { useUserStore } from '@/store'
 import { t } from '@/locales'
 
@@ -22,10 +22,10 @@ const model = ref({
   proxy: userConfig.value.proxy,
 })
 
-const models = userStore.allModels().map(v => ({
-  label: v,
-  value: v,
-}))
+// const models = userStore.allModels().map(v => ({
+//   label: v,
+//   value: v,
+// }))
 
 const rules: FormRules = {
   name: [
