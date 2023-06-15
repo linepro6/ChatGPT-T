@@ -111,7 +111,7 @@ function saveUserInfo() {
         <NInput v-model:value="model.apiKey" placeholder="Openai API Key" />
       </NFormItem>
       <NFormItem path="modelName" label="Model Name">
-        <NSelect v-model:value="model.modelName" placeholder="Select" :options="models" />
+        <NInput v-model:value="model.modelName" placeholder="gpt-3.5-turbo" />
       </NFormItem>
       <NFormItem path="host" label="Host">
         <NInput v-model:value="model.host" placeholder="" />
